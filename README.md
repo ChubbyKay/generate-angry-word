@@ -24,3 +24,4 @@
 ・ Express v4.17.1<br>
 ・ Express-Handlebars v5.1.0<br>
 ． body-parser v1.19.0<br>
+・ handlebars v4.7.6<br>
