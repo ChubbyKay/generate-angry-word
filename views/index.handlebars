@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">幹話生產器</h5>
+          <hr>
+          <h3 class="card-question">你想對誰說幹話？</h3>
+
+          <form method="POST" action="/">
+
+            <div class="form-group form-row">
+              <div class="card" style="width: 18rem;">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                  class="card-img-top" alt="工程師">
+                <div class="custom-control custom-checkbox">
+                  <input class="form-check-input" type="radio" name="job" id="engineer" value="engineer"
+                    {{#if_optionsChecked job 'engineer'}}checked{{/if_optionsChecked}}>
+                  <label class="form-check-label" for="job">工程師</label>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                  class="card-img-top" alt="設計師">
+                <div class="custom-control custom-checkbox">
+                  <input class="form-check-input" type="radio" name="job" id="designer" value="designer"
+                    {{#if_optionsChecked job 'designer'}}checked{{/if_optionsChecked}}>
+                  <label class="form-check-label" for="job">
+                    設計師
+                  </label>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                  class="card-img-top" alt="創業家">
+                <div class="custom-control custom-checkbox">
+                  <input class="form-check-input" type="radio" name="job" id="entrepreneur" value="entrepreneur"
+                    {{#if_optionsChecked job 'entrepreneur'}}checked{{/if_optionsChecked}}>
+                  <label class="form-check-label" for="job">
+                    創業家
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-success" type="submit">產生幹話</button>
+            </div>
+
+            {{#if angryWord}}
+            <div class="alert alert-info" role="alert">
+              <code>{{angryWord}}</code>
+            </div>
+            {{/if}}
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
